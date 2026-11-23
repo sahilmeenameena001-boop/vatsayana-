@@ -12,17 +12,17 @@
       <span class="home-logo-title"><small>Chambers of</small><strong>Aayushmaan Vatsyayana</strong></span>
     </a>
     <nav class="home-desktop-nav" aria-label="Main navigation"><a href="#about-us">About</a><a href="#team">Profile</a><a href="#services">Practice areas</a><a href="#contact" data-open-appointment aria-haspopup="dialog">Contact</a></nav>
-    <details class="home-mobile-menu">
-      <summary aria-label="Navigation menu">
+    <div class="home-mobile-menu">
+      <button class="home-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="home-mobile-nav">
         <span class="home-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
-      </summary>
-      <nav aria-label="Mobile navigation">
+      </button>
+      <nav id="home-mobile-nav" aria-label="Mobile navigation" hidden>
         <a href="#hero">Home</a>
         <a href="#about-us">About</a>
         <a href="#services">Services</a>
         <a href="#contact" data-open-appointment aria-haspopup="dialog">Let’s Talk</a>
       </nav>
-    </details>
+    </div>
   </div>
 </header><div class="relative flex w-full justify-center overflow-hidden bg-[#6d2c34] home-hero-body"><div class="pointer-events-none absolute left-0 top-1/2 hidden -translate-y-1/2 sm:block w-[64%] max-w-[820px] aspect-[805/764]"><img alt="" loading="lazy" decoding="async" data-nimg="fill" class="object-contain object-left" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="./assets/site/images/hero-watermark.__q189041d8.svg"></div><div class="home-hero-engraving"><img src="./assets/site/images/vatsyayana-engraving.png" alt="Engraved portrait of Aayushmaan Vatsyayana at his desk" width="1080" height="1350" loading="eager" decoding="async"></div><div class="home-hero-content relative z-10 flex w-full max-w-[1570px] justify-center md:justify-start items-center px-5 sm:px-8 md:px-12 lg:px-20"><div class="flex home-hero-copy flex-col gap-6 md:gap-10 lg:pl-[34px]"><div class="flex flex-col gap-3 md:gap-5"><div style="opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);" class="flex items-center gap-2.5"><img alt="" loading="lazy" width="27" height="23" decoding="async" data-nimg="1" class="shrink-0 w-5 h-4 md:w-[27px] md:h-[23px]" style="color:transparent" src="./assets/site/images/plus-icon.__q189041d8.svg"><p class="font-jost text-sm md:text-lg font-light tracking-[-0.54px] text-[#f9f5ea]">Arbitration. Civil Litigation. Criminal Law.</p></div><h1 style="opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);" class="font-cormorant text-[42px] sm:text-[56px] md:text-[64px] lg:text-[72px] font-light leading-[1.05] tracking-[-1.5px] text-[#f9f5ea]">Chambers of <br>Aayushmaan Vatsyayana</h1><p class="home-hero-designation font-jost text-[#f9f5ea]">Nominated/Standing Counsel</p></div><div style="opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"><a class="home-action" href="#services">Explore practice areas</a></div></div></div></div></section>
 <section id="about-us" class="home-section "><div class="home-section-inner"><h2>About the Chambers</h2><div class="home-split"><div class="home-prose"><p>Aayushmaan Vatsyayana appears in arbitration and alternative dispute resolution, corporate and commercial matters, writ and constitutional petitions, civil litigation, and criminal law cases. He represents clients before the Supreme Court of India, the Central Administrative Tribunal in Delhi, the Delhi High Court, various District and Sessions Courts in East, North West, and New Delhi, and the Debt Recovery Tribunal in Delhi.</p><p>Aayushmaan Vatsyayana holds the designation of Nominated/Standing Counsel and has appeared before the Supreme Court of India, Central Administrative Tribunal Delhi, Delhi High Court, District and Sessions Courts at Karkardooma, Rohini, and Patiala House, as well as the Debt Recovery Tribunal in Delhi.</p></div><img src="./assets/site/images/vatsyayana-office.png" alt="Aayushmaan Vatsyayana in his chambers" width="1080" height="1350" loading="lazy" decoding="async"></div></div></section>
@@ -37,7 +37,10 @@
 <section id="contact" class="home-section "><div class="home-section-inner"><h2>Professional Contact</h2><button class="home-action" type="button" data-open-appointment aria-haspopup="dialog">Schedule an appointment</button><p>Integrity, Expertise, Trust, Discretion</p></div></section>
 </main>
 <section class="flex w-full flex-col items-center justify-center border-t border-[rgba(184,147,90,0.15)] bg-[#111] px-5 sm:px-8 md:px-16 lg:px-[138px] py-[19px] mx-auto" data-sar-section="home/s11-content" data-sar-type="content"><div class="flex w-full items-start gap-3 md:gap-4"><img alt="" loading="lazy" width="18" height="18" decoding="async" data-nimg="1" class="mt-0.5 shrink-0" style="color:transparent" src="./assets/site/images/disclaimer-icon.__q189041d8.svg"><p class="text-justify font-jost text-[11px] leading-[18.15px]"><span class="font-medium text-white/55">Bar Council of India Disclaimer:</span><span class="font-light italic text-white/35"> This website is not intended to solicit clients or advertise. By accessing this website, you acknowledge that you are seeking information of your own accord and volition and that no form of solicitation has taken place by the firm or its members. The information provided on this website is for general informational purposes only and does not constitute legal advice. Readers are advised to consult a qualified legal professional before taking any action based on the information contained herein.</span></p></div></section>
-<footer class="home-footer"><a href="#hero">Chambers of Aayushmaan Vatsyayana</a><nav aria-label="Footer navigation"><a href="#about-us">About</a><a href="#team">Profile</a><a href="#services">Practice areas</a><a href="#contact" data-open-appointment aria-haspopup="dialog">Contact</a></nav></footer>
+<footer class="home-footer"><div class="home-footer-inner"><a class="home-logo" href="#hero" aria-label="Chambers of Aayushmaan Vatsyayana">
+      <span class="home-logo-emblem" aria-hidden="true"><img src="./assets/site/images/vatsyayana-logo.jpg" alt="" width="1188" height="750" loading="eager" decoding="async"></span>
+      <span class="home-logo-title"><small>Chambers of</small><strong>Aayushmaan Vatsyayana</strong></span>
+    </a><nav aria-label="Footer navigation"><a href="#about-us">About</a><a href="#team">Profile</a><a href="#services">Practice areas</a><a href="#contact" data-open-appointment aria-haspopup="dialog">Contact</a></nav><a class="home-back-top" href="#hero"><span aria-hidden="true">↑</span> Back to top</a></div></footer>
 
 <dialog id="appointment-dialog" class="appointment-dialog" aria-labelledby="appointment-title">
   <div class="appointment-heading">

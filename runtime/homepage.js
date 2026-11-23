@@ -1,17 +1,26 @@
 const mobileMenu = document.querySelector('.home-mobile-menu');
-const menuToggle = mobileMenu.querySelector('summary');
+const menuToggle = mobileMenu.querySelector('.home-menu-toggle');
+const mobileNav = mobileMenu.querySelector('nav');
 
-mobileMenu.addEventListener('click', (event) => {
-  if (event.target.closest('a')) mobileMenu.open = false;
+function setMenuOpen(open) {
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+  mobileNav.hidden = !open;
+}
+
+menuToggle.addEventListener('click', () => setMenuOpen(mobileNav.hidden));
+
+mobileNav.addEventListener('click', (event) => {
+  if (event.target.closest('a')) setMenuOpen(false);
 });
 
 document.addEventListener('click', (event) => {
-  if (mobileMenu.open && !mobileMenu.contains(event.target)) mobileMenu.open = false;
+  if (!mobileNav.hidden && !mobileMenu.contains(event.target)) setMenuOpen(false);
 });
 
 mobileMenu.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && mobileMenu.open) {
-    mobileMenu.open = false;
+  if (event.key === 'Escape' && !mobileNav.hidden) {
+    setMenuOpen(false);
     menuToggle.focus();
   }
 });
@@ -45,7 +54,7 @@ document.querySelectorAll('[data-open-appointment]').forEach((trigger) => {
     const day = String(today.getDate()).padStart(2, '0');
     form.elements.date.min = [year, month, day].join('-');
     if (mobileMenu.contains(trigger)) {
-      mobileMenu.open = false;
+      setMenuOpen(false);
       menuToggle.focus();
     }
     dialog.showModal();
