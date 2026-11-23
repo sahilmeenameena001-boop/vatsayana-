@@ -1,3 +1,21 @@
+const mobileMenu = document.querySelector('.home-mobile-menu');
+const menuToggle = mobileMenu.querySelector('summary');
+
+mobileMenu.addEventListener('click', (event) => {
+  if (event.target.closest('a')) mobileMenu.open = false;
+});
+
+document.addEventListener('click', (event) => {
+  if (mobileMenu.open && !mobileMenu.contains(event.target)) mobileMenu.open = false;
+});
+
+mobileMenu.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && mobileMenu.open) {
+    mobileMenu.open = false;
+    menuToggle.focus();
+  }
+});
+
 const engraving = document.querySelector('.practice-engraving');
 
 if (engraving && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -26,6 +44,10 @@ document.querySelectorAll('[data-open-appointment]').forEach((trigger) => {
     const month = String(today.getMonth() + 1).padStart(2, '0');
     const day = String(today.getDate()).padStart(2, '0');
     form.elements.date.min = [year, month, day].join('-');
+    if (mobileMenu.contains(trigger)) {
+      mobileMenu.open = false;
+      menuToggle.focus();
+    }
     dialog.showModal();
   });
 });
