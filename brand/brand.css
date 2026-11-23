@@ -574,7 +574,6 @@
   }
 
   .home-header .home-desktop-nav,
-  .home-hero-engraving,
   .practice-engraving {
     display: none;
   }
@@ -656,6 +655,18 @@
 
   #hero .home-hero-body {
     min-height: 0;
+  }
+
+  .home-hero-engraving {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: clamp(18rem, 105vw, 33rem);
+  }
+
+  .home-hero-engraving img {
+    object-position: center 63%;
+    mask-image: linear-gradient(to bottom, transparent, #000 18%);
   }
 
   #hero h1 {
